@@ -439,7 +439,7 @@
       </div>
       <div class="hero-image-wrap">
         <div class="hero-blob"></div>
-        <img src="https://images.unsplash.com/photo-1578985545062-69928b1ea965?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gourmet Cake" style="width:100%; max-width:420px; height:420px; object-fit:cover; border-radius:50%; position:relative; z-index:1; box-shadow:0 30px 60px rgba(0,0,0,.4);"/>
+        <img src="https://images.unsplash.com/photo-1535141192574-5d48937f6104?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gourmet Cake" style="width:100%; max-width:420px; height:420px; object-fit:cover; border-radius:50%; position:relative; z-index:1; box-shadow:0 30px 60px rgba(0,0,0,.4);"/>
       </div>
     </div>
   </section>
@@ -464,7 +464,7 @@
           </div>
         </div>
         <div class="cat-card slices" onclick="filterAndShop('Cake Slices')">
-          <div class="cat-card-img" style="background: url('https://images.unsplash.com/photo-1621236378699-8597faa6a71e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
+          <div class="cat-card-img" style="background: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
           <div class="cat-card-body">
             <span class="cat-tag">Indulgent</span>
             <h3 class="cat-card-title">Cake Slices</h3>
@@ -706,7 +706,7 @@
 <div class="page" id="page-about">
   <div class="about-page">
     <div class="about-hero">
-      <div class="about-img" style="background: url('https://images.unsplash.com/photo-1557925923-33b251dc32a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; font-size: 0;"></div>
+      <div class="about-img" style="background: url('https://images.unsplash.com/photo-1556285324-4061a15ba176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; font-size: 0;"></div>
       <div>
         <p class="section-eyebrow">Our story</p>
         <h1 class="about-title">Baked with<br/>obsessive care.</h1>
@@ -941,7 +941,7 @@ function renderShop() {
 function productCard(p) {
   const imgMap = {
     'Whole Cakes': 'https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'Cake Slices': 'https://images.unsplash.com/photo-1621236378699-8597faa6a71e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'Cake Slices': 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     'Cake Pops': 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   };
   return `<div class="product-card">
@@ -976,7 +976,7 @@ function openDetail(id) {
   currentQty = 1;
   const imgMap = {
     'Whole Cakes': 'https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'Cake Slices': 'https://images.unsplash.com/photo-1621236378699-8597faa6a71e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'Cake Slices': 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     'Cake Pops': 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   };
   document.getElementById('detail-img').innerHTML = `<img src="${imgMap[p.cat]}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;border-radius:24px;"/>`;
@@ -1042,7 +1042,7 @@ function renderCartItems() {
   container.innerHTML = cart.map((item,idx) => `
     <div class="cart-item">
       <div class="cart-item-img" style="overflow:hidden;">
-        <img src="${item.product.cat === 'Whole Cakes' ? 'https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80' : item.product.cat === 'Cake Slices' ? 'https://images.unsplash.com/photo-1621236378699-8597faa6a71e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80' : 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'}" style="width:100%;height:100%;object-fit:cover;" alt="cake"/>
+        <img src="${item.product.cat === 'Whole Cakes' ? 'https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80' : item.product.cat === 'Cake Slices' ? 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80' : 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'}" style="width:100%;height:100%;object-fit:cover;" alt="cake"/>
       </div>
       <div class="cart-item-info">
         <div class="cart-item-name">${item.product.name}</div>
