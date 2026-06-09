@@ -384,10 +384,7 @@
       <label class="form-label">Sizes available (comma-separated)</label>
       <input class="form-input" id="modal-sizes" placeholder="Small, Medium, Large"/>
     </div>
-    <div class="form-field">
-      <label class="form-label">Emoji / Icon</label>
-      <input class="form-input" id="modal-emoji" placeholder="🎂"/>
-    </div>
+
     <div class="form-field">
       <label class="form-label">Stock Status</label>
       <select class="form-input" id="modal-stock">
@@ -442,67 +439,12 @@
       </div>
       <div class="hero-image-wrap">
         <div class="hero-blob"></div>
-        <svg class="hero-cake-svg" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <clipPath id="cakeClip"><ellipse cx="210" cy="210" rx="190" ry="190"/></clipPath>
-          </defs>
-          <!-- cake stand -->
-          <ellipse cx="210" cy="355" rx="120" ry="14" fill="#3D2B1F" opacity=".6"/>
-          <rect x="195" y="340" width="30" height="28" rx="6" fill="#6B4226"/>
-          <ellipse cx="210" cy="368" rx="70" ry="8" fill="#4A2E1A"/>
-          <!-- cake layers -->
-          <ellipse cx="210" cy="295" rx="115" ry="18" fill="#C8843A"/>
-          <rect x="95" y="255" width="230" height="42" rx="4" fill="#F5E6D0"/>
-          <ellipse cx="210" cy="255" rx="115" ry="18" fill="#E8C9A0"/>
-          <!-- middle layer -->
-          <ellipse cx="210" cy="255" rx="115" ry="18" fill="#C8843A"/>
-          <rect x="100" y="200" width="220" height="57" rx="4" fill="#FAF0E6"/>
-          <ellipse cx="210" cy="200" rx="110" ry="17" fill="#E8C9A0"/>
-          <!-- top layer -->
-          <ellipse cx="210" cy="200" rx="110" ry="17" fill="#C8843A"/>
-          <rect x="105" y="155" width="210" height="47" rx="4" fill="#FDF6EE"/>
-          <ellipse cx="210" cy="155" rx="105" ry="16" fill="#E8D5C0"/>
-          <!-- frosting drips -->
-          <path d="M140 155 Q143 138 146 155" fill="#FFFFFF" opacity=".85"/>
-          <path d="M168 155 Q172 133 176 155" fill="#FFFFFF" opacity=".85"/>
-          <path d="M196 155 Q200 128 204 155" fill="#FFFFFF" opacity=".85"/>
-          <path d="M224 155 Q228 135 232 155" fill="#FFFFFF" opacity=".85"/>
-          <path d="M252 155 Q256 130 260 155" fill="#FFFFFF" opacity=".85"/>
-          <!-- top surface -->
-          <ellipse cx="210" cy="154" rx="105" ry="16" fill="#FFFAF4"/>
-          <!-- roses on top -->
-          <circle cx="175" cy="150" r="14" fill="#E8B4B8"/>
-          <circle cx="175" cy="150" r="9" fill="#D4838A"/>
-          <circle cx="175" cy="150" r="5" fill="#C05A63"/>
-          <circle cx="210" cy="145" r="16" fill="#E8B4B8"/>
-          <circle cx="210" cy="145" r="10" fill="#D4838A"/>
-          <circle cx="210" cy="145" r="6" fill="#C05A63"/>
-          <circle cx="245" cy="150" r="13" fill="#E8B4B8"/>
-          <circle cx="245" cy="150" r="8" fill="#D4838A"/>
-          <circle cx="245" cy="150" r="4" fill="#C05A63"/>
-          <!-- candles -->
-          <rect x="155" y="108" width="8" height="34" rx="3" fill="#F0D5B0"/>
-          <ellipse cx="159" cy="106" rx="5" ry="7" fill="#FFAB40" opacity=".9"/>
-          <rect x="205" y="100" width="9" height="42" rx="3" fill="#E8B4B8"/>
-          <ellipse cx="209.5" cy="98" rx="5.5" ry="8" fill="#FF8C42" opacity=".9"/>
-          <rect x="253" y="110" width="8" height="32" rx="3" fill="#D4DDCE"/>
-          <ellipse cx="257" cy="108" rx="4.5" ry="7" fill="#FFD54F" opacity=".9"/>
-          <!-- sprinkles -->
-          <rect x="130" y="225" width="12" height="4" rx="2" fill="#E8B4B8" transform="rotate(-30 130 225)"/>
-          <rect x="270" y="235" width="10" height="4" rx="2" fill="#C8843A" transform="rotate(20 270 235)"/>
-          <rect x="155" y="278" width="11" height="4" rx="2" fill="#D4DDCE" transform="rotate(45 155 278)"/>
-          <rect x="245" y="268" width="10" height="4" rx="2" fill="#E8B4B8" transform="rotate(-15 245 268)"/>
-          <rect x="185" y="230" width="9" height="3" rx="1.5" fill="#C8843A" transform="rotate(60 185 230)"/>
-          <rect x="225" y="240" width="10" height="3" rx="1.5" fill="#8FAA86" transform="rotate(-40 225 240)"/>
-        </svg>
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1ea965?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gourmet Cake" style="width:100%; max-width:420px; height:420px; object-fit:cover; border-radius:50%; position:relative; z-index:1; box-shadow:0 30px 60px rgba(0,0,0,.4);"/>
       </div>
     </div>
   </section>
 
-  <svg class="drip-divider" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0 0 L1440 0 L1440 30 Q1350 60 1260 35 Q1170 10 1080 40 Q990 60 900 30 Q810 5 720 40 Q630 60 540 30 Q450 5 360 40 Q270 60 180 30 Q90 5 0 35 Z" fill="#1C1008"/>
-    <path d="M0 35 Q90 5 180 30 Q270 60 360 40 Q450 5 540 30 Q630 60 720 40 Q810 5 900 30 Q990 60 1080 40 Q1170 10 1260 35 Q1350 60 1440 30 L1440 60 L0 60 Z" fill="#FAF5EE"/>
-  </svg>
+
 
   <!-- CATEGORIES -->
   <section class="categories">
@@ -514,7 +456,7 @@
       </div>
       <div class="cat-grid">
         <div class="cat-card whole" onclick="filterAndShop('Whole Cakes')">
-          <div class="cat-card-img">🎂</div>
+          <div class="cat-card-img" style="background: url('https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
           <div class="cat-card-body">
             <span class="cat-tag">Classic</span>
             <h3 class="cat-card-title">Whole Cakes</h3>
@@ -522,7 +464,7 @@
           </div>
         </div>
         <div class="cat-card slices" onclick="filterAndShop('Cake Slices')">
-          <div class="cat-card-img">🍰</div>
+          <div class="cat-card-img" style="background: url('https://images.unsplash.com/photo-1621236378699-8597faa6a71e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
           <div class="cat-card-body">
             <span class="cat-tag">Indulgent</span>
             <h3 class="cat-card-title">Cake Slices</h3>
@@ -530,7 +472,7 @@
           </div>
         </div>
         <div class="cat-card pops" onclick="filterAndShop('Cake Pops')">
-          <div class="cat-card-img">🍡</div>
+          <div class="cat-card-img" style="background: url('https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
           <div class="cat-card-body">
             <span class="cat-tag">Fun</span>
             <h3 class="cat-card-title">Cake Pops</h3>
@@ -764,7 +706,7 @@
 <div class="page" id="page-about">
   <div class="about-page">
     <div class="about-hero">
-      <div class="about-img">👩‍🍳</div>
+      <div class="about-img" style="background: url('https://images.unsplash.com/photo-1557925923-33b251dc32a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; font-size: 0;"></div>
       <div>
         <p class="section-eyebrow">Our story</p>
         <h1 class="about-title">Baked with<br/>obsessive care.</h1>
@@ -997,10 +939,13 @@ function renderShop() {
 }
 
 function productCard(p) {
-  const catColors = {'Whole Cakes':'#F5E6D0','Cake Slices':'#F0E4EE','Cake Pops':'#E4EDE8'};
+  const imgMap = {
+    'Whole Cakes': 'https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'Cake Slices': 'https://images.unsplash.com/photo-1621236378699-8597faa6a71e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'Cake Pops': 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  };
   return `<div class="product-card">
-    <div class="product-card-img" style="background:${catColors[p.cat]||'var(--cream)'}">
-      <span style="font-size:3.5rem">${p.emoji}</span>
+    <div class="product-card-img" style="background: url('${imgMap[p.cat]}') center/cover;">
       ${p.stock==='Low Stock'?'<span style="position:absolute;top:10px;right:10px;background:#FEF3C7;color:#92400E;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:999px">Low Stock</span>':''}
       ${p.stock==='Out of Stock'?'<span style="position:absolute;top:10px;right:10px;background:#FEE2E2;color:#991B1B;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:999px">Out of Stock</span>':''}
     </div>
@@ -1020,7 +965,7 @@ function quickAdd(id) {
   const p = products.find(x=>x.id===id);
   if(!p) return;
   addToCart(p, p.sizes[0], 1);
-  showToast(`${p.emoji} ${p.name} added to cart!`);
+  showToast(`${p.name} added to cart!`);
 }
 
 function openDetail(id) {
@@ -1029,7 +974,12 @@ function openDetail(id) {
   currentProduct = p;
   currentSize = p.sizes[0];
   currentQty = 1;
-  document.getElementById('detail-img').innerHTML = `<span style="font-size:8rem">${p.emoji}</span>`;
+  const imgMap = {
+    'Whole Cakes': 'https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'Cake Slices': 'https://images.unsplash.com/photo-1621236378699-8597faa6a71e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    'Cake Pops': 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  };
+  document.getElementById('detail-img').innerHTML = `<img src="${imgMap[p.cat]}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;border-radius:24px;"/>`;
   const catColors = {'Whole Cakes':'var(--caramel-light)','Cake Slices':'var(--rose)','Cake Pops':'var(--sage)'};
   const catText = {'Whole Cakes':'color:var(--caramel)','Cake Slices':'color:var(--rose-dark)','Cake Pops':'color:var(--sage-dark)'};
   document.getElementById('detail-badge').textContent = p.cat;
@@ -1062,7 +1012,7 @@ function changeQty(delta) {
 function addCurrentToCart() {
   if(!currentProduct) return;
   addToCart(currentProduct, currentSize, currentQty);
-  showToast(`${currentProduct.emoji} ${currentProduct.name} added to cart!`);
+  showToast(`${currentProduct.name} added to cart!`);
 }
 
 // ========== CART ==========
@@ -1091,7 +1041,9 @@ function renderCartItems() {
   footer.style.display = 'block';
   container.innerHTML = cart.map((item,idx) => `
     <div class="cart-item">
-      <div class="cart-item-img">${item.product.emoji}</div>
+      <div class="cart-item-img" style="overflow:hidden;">
+        <img src="${item.product.cat === 'Whole Cakes' ? 'https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80' : item.product.cat === 'Cake Slices' ? 'https://images.unsplash.com/photo-1621236378699-8597faa6a71e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80' : 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'}" style="width:100%;height:100%;object-fit:cover;" alt="cake"/>
+      </div>
       <div class="cart-item-info">
         <div class="cart-item-name">${item.product.name}</div>
         <div class="cart-item-meta">${item.size}</div>
@@ -1143,7 +1095,7 @@ function renderCheckoutSummary() {
   const container = document.getElementById('checkout-summary-items');
   container.innerHTML = cart.map(item => `
     <div class="summary-item">
-      <span>${item.product.emoji} ${item.product.name} <span style="color:var(--muted);font-size:0.78rem">${item.size} ×${item.qty}</span></span>
+      <span>${item.product.name} <span style="color:var(--muted);font-size:0.78rem">${item.size} ×${item.qty}</span></span>
       <span>R${item.price * item.qty}</span>
     </div>`
   ).join('');
@@ -1229,7 +1181,7 @@ function renderAdminRecentOrders() {
 function renderAdminProducts() {
   document.getElementById('admin-products-table').innerHTML = products.map(p => `
     <tr>
-      <td><span style="font-size:1.2rem;margin-right:0.5rem">${p.emoji}</span><strong>${p.name}</strong></td>
+      <td><strong>${p.name}</strong></td>
       <td><span style="font-size:0.75rem;color:var(--muted)">${p.cat}</span></td>
       <td>from R${p.price}</td>
       <td>${p.stock==='In Stock'?'<span class="status-badge status-completed">In Stock</span>':p.stock==='Low Stock'?'<span class="status-badge status-pending">Low Stock</span>':'<span class="status-badge" style="background:#FEE2E2;color:#991B1B">Out of Stock</span>'}</td>
@@ -1257,7 +1209,7 @@ function renderAdminOrders() {
 function openAddProduct() {
   editingProductId = null;
   document.getElementById('modal-title').textContent = 'Add Product';
-  ['modal-name','modal-price','modal-desc','modal-ingredients','modal-sizes','modal-emoji'].forEach(id => document.getElementById(id).value='');
+  ['modal-name','modal-price','modal-desc','modal-ingredients','modal-sizes'].forEach(id => document.getElementById(id).value='');
   document.getElementById('modal-category').value='Whole Cakes';
   document.getElementById('modal-stock').value='In Stock';
   document.getElementById('product-modal').classList.remove('hidden');
@@ -1272,7 +1224,6 @@ function openEditProduct(id) {
   document.getElementById('modal-desc').value = p.desc;
   document.getElementById('modal-ingredients').value = p.ingredients.join(', ');
   document.getElementById('modal-sizes').value = p.sizes.join(', ');
-  document.getElementById('modal-emoji').value = p.emoji;
   document.getElementById('modal-category').value = p.cat;
   document.getElementById('modal-stock').value = p.stock;
   document.getElementById('product-modal').classList.remove('hidden');
@@ -1288,7 +1239,6 @@ function saveProduct() {
     desc: document.getElementById('modal-desc').value,
     ingredients: document.getElementById('modal-ingredients').value.split(',').map(s=>s.trim()).filter(Boolean),
     sizes: document.getElementById('modal-sizes').value.split(',').map(s=>s.trim()).filter(Boolean),
-    emoji: document.getElementById('modal-emoji').value || '🎂',
     allergens: 'Please check with us for allergen details.',
     popularity: 75,
     stock: document.getElementById('modal-stock').value,
