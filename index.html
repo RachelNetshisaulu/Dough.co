@@ -1863,6 +1863,12 @@
         </div>
       </div>
       <div class="form-field">
+        <label class="form-label">Product Image</label>
+        <input class="form-input" id="modal-image" type="file" accept="image/*" onchange="handleImageUpload(event)" />
+        <input type="hidden" id="modal-image-data" />
+        <div id="modal-image-preview" style="margin-top:0.5rem;display:none;width:100px;height:100px;border-radius:8px;background-size:cover;background-position:center;"></div>
+      </div>
+      <div class="form-field">
         <label class="form-label">Description</label>
         <textarea class="form-input" id="modal-desc" rows="3" placeholder="Describe this delicious cake..."></textarea>
       </div>
@@ -1871,8 +1877,8 @@
         <input class="form-input" id="modal-ingredients" placeholder="flour, butter, eggs, lemon zest" />
       </div>
       <div class="form-field">
-        <label class="form-label">Sizes available (comma-separated)</label>
-        <input class="form-input" id="modal-sizes" placeholder="Small, Medium, Large" />
+        <label class="form-label">Sizes & Prices (e.g. Small:380, Medium:450)</label>
+        <input class="form-input" id="modal-sizes" placeholder="Small:380, Medium:450" />
       </div>
 
       <div class="form-field">
@@ -1931,7 +1937,7 @@
         <div class="hero-image-wrap">
           <div class="hero-blob"></div>
           <img
-            src="https://images.unsplash.com/photo-1535141192574-5d48937f6104?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            src="file:///C:/Users/rachp/.gemini/antigravity-ide/brain/61a296f3-cbb6-4c58-bd9e-66f9f809dee2/gourmet_cake_hero_1781113903909.png"
             alt="Gourmet Cake"
             style="width:100%; max-width:420px; height:420px; object-fit:cover; border-radius:50%; position:relative; z-index:1; box-shadow:0 30px 60px rgba(0,0,0,.4);" />
         </div>
@@ -2217,7 +2223,7 @@
     <div class="about-page">
       <div class="about-hero">
         <div class="about-img"
-          style="background: url('https://images.unsplash.com/photo-1556285324-4061a15ba176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; font-size: 0;">
+          style="background: url('file:///C:/Users/rachp/.gemini/antigravity-ide/brain/61a296f3-cbb6-4c58-bd9e-66f9f809dee2/about_bakery_1781113915516.png') center/cover; font-size: 0;">
         </div>
         <div>
           <p class="section-eyebrow">Our story</p>
@@ -2452,16 +2458,16 @@
   <script>
     // ========== DATA ==========
     let products = [
-      { id: 1, name: "Red Velvet Dream", cat: "Whole Cakes", price: 380, emoji: "🎂", desc: "A towering classic — deep crimson layers with velvety cream cheese frosting. Rich, moist, and utterly irresistible.", ingredients: ["flour", "buttermilk", "cocoa", "red food colour", "cream cheese", "butter", "vanilla"], allergens: "Contains gluten, dairy, eggs.", sizes: ["Small (6\")", "Medium (8\")", "Large (10\")"], popularity: 95, stock: "In Stock" },
-      { id: 2, name: "Lemon Drizzle Bloom", cat: "Whole Cakes", price: 350, emoji: "🍋", desc: "Zingy lemon sponge soaked in citrus syrup, finished with a sharp glaze and edible flowers. Bright and refreshing.", ingredients: ["flour", "lemon zest", "lemon juice", "butter", "eggs", "icing sugar", "edible flowers"], allergens: "Contains gluten, dairy, eggs.", sizes: ["Small (6\")", "Medium (8\")", "Large (10\")"], popularity: 88, stock: "In Stock" },
-      { id: 3, name: "Dark Chocolate Obsession", cat: "Whole Cakes", price: 420, emoji: "🍫", desc: "Three tiers of bittersweet chocolate sponge with ganache filling and a mirror-glaze finish. For serious chocolate lovers.", ingredients: ["dark chocolate", "flour", "cocoa powder", "butter", "eggs", "cream", "sugar"], allergens: "Contains gluten, dairy, eggs, soy.", sizes: ["Medium (8\")", "Large (10\")", "XL (12\")"], popularity: 92, stock: "In Stock" },
-      { id: 4, name: "Vanilla Cloud Slice", cat: "Cake Slices", price: 75, emoji: "🍰", desc: "Delicate vanilla chiffon with clouds of whipped cream and a light vanilla bean glaze. Simple, perfect, timeless.", ingredients: ["flour", "vanilla bean", "eggs", "butter", "cream", "sugar"], allergens: "Contains gluten, dairy, eggs.", sizes: ["Regular", "Double"], popularity: 90, stock: "In Stock" },
-      { id: 5, name: "Salted Caramel Slice", cat: "Cake Slices", price: 85, emoji: "🍮", desc: "Moist brown butter sponge layered with house-made salted caramel and topped with a flaky sea salt praline.", ingredients: ["brown butter", "caramel", "sea salt", "flour", "eggs", "cream"], allergens: "Contains gluten, dairy, eggs, nuts.", sizes: ["Regular", "Double"], popularity: 97, stock: "In Stock" },
-      { id: 6, name: "Strawberry Shortcake Slice", cat: "Cake Slices", price: 80, emoji: "🍓", desc: "Light génoise soaked in strawberry syrup, layered with fresh strawberries and Chantilly cream.", ingredients: ["flour", "strawberries", "cream", "sugar", "eggs", "vanilla"], allergens: "Contains gluten, dairy, eggs.", sizes: ["Regular"], popularity: 85, stock: "Low Stock" },
-      { id: 7, name: "Rose Gold Cake Pops", cat: "Cake Pops", price: 55, emoji: "🌸", desc: "Elegant vanilla cake pops hand-dipped in rose gold chocolate and finished with gold dust. Sold in sets of 4.", ingredients: ["vanilla cake", "white chocolate", "rose colour", "gold dust", "butter"], allergens: "Contains gluten, dairy, eggs.", sizes: ["Set of 4", "Set of 8", "Set of 12"], popularity: 80, stock: "In Stock" },
-      { id: 8, name: "Choc Hazelnut Pops", cat: "Cake Pops", price: 60, emoji: "🍫", desc: "Hazelnut praline cake pops dipped in dark chocolate with a crushed hazelnut coating. Rich and nutty.", ingredients: ["chocolate cake", "hazelnuts", "dark chocolate", "butter", "cream"], allergens: "Contains gluten, dairy, eggs, nuts.", sizes: ["Set of 4", "Set of 8", "Set of 12"], popularity: 82, stock: "In Stock" },
-      { id: 9, name: "Earl Grey & Lavender", cat: "Whole Cakes", price: 395, emoji: "🫖", desc: "Fragrant Earl Grey sponge infused with French lavender, layered with honey mascarpone and candied lemon.", ingredients: ["flour", "Earl Grey tea", "lavender", "mascarpone", "honey", "lemon", "butter", "eggs"], allergens: "Contains gluten, dairy, eggs.", sizes: ["Small (6\")", "Medium (8\")"], popularity: 78, stock: "In Stock" },
-      { id: 10, name: "Matcha Mochi Slice", cat: "Cake Slices", price: 90, emoji: "🍵", desc: "Japanese-inspired ceremonial matcha sponge with a mochi filling and white chocolate ganache. Complex and delicate.", ingredients: ["matcha powder", "flour", "mochi", "white chocolate", "cream", "butter"], allergens: "Contains gluten, dairy, eggs, soy.", sizes: ["Regular", "Double"], popularity: 72, stock: "Low Stock" },
+      { id: 1, name: "Red Velvet Dream", cat: "Whole Cakes", price: 380, emoji: "🎂", desc: "A towering classic — deep crimson layers with velvety cream cheese frosting. Rich, moist, and utterly irresistible.", ingredients: ["flour", "buttermilk", "cocoa", "red food colour", "cream cheese", "butter", "vanilla"], allergens: "Contains gluten, dairy, eggs.", sizes: [{name: "Small (6\")", price: 380}, {name: "Medium (8\")", price: 480}, {name: "Large (10\")", price: 580}], popularity: 95, stock: "In Stock" },
+      { id: 2, name: "Lemon Drizzle Bloom", cat: "Whole Cakes", price: 350, emoji: "🍋", desc: "Zingy lemon sponge soaked in citrus syrup, finished with a sharp glaze and edible flowers. Bright and refreshing.", ingredients: ["flour", "lemon zest", "lemon juice", "butter", "eggs", "icing sugar", "edible flowers"], allergens: "Contains gluten, dairy, eggs.", sizes: [{name: "Small (6\")", price: 350}, {name: "Medium (8\")", price: 450}, {name: "Large (10\")", price: 550}], popularity: 88, stock: "In Stock" },
+      { id: 3, name: "Dark Chocolate Obsession", cat: "Whole Cakes", price: 420, emoji: "🍫", desc: "Three tiers of bittersweet chocolate sponge with ganache filling and a mirror-glaze finish. For serious chocolate lovers.", ingredients: ["dark chocolate", "flour", "cocoa powder", "butter", "eggs", "cream", "sugar"], allergens: "Contains gluten, dairy, eggs, soy.", sizes: [{name: "Medium (8\")", price: 420}, {name: "Large (10\")", price: 520}, {name: "XL (12\")", price: 620}], popularity: 92, stock: "In Stock" },
+      { id: 4, name: "Vanilla Cloud Slice", cat: "Cake Slices", price: 75, emoji: "🍰", desc: "Delicate vanilla chiffon with clouds of whipped cream and a light vanilla bean glaze. Simple, perfect, timeless.", ingredients: ["flour", "vanilla bean", "eggs", "butter", "cream", "sugar"], allergens: "Contains gluten, dairy, eggs.", sizes: [{name: "Regular", price: 75}, {name: "Double", price: 140}], popularity: 90, stock: "In Stock" },
+      { id: 5, name: "Salted Caramel Slice", cat: "Cake Slices", price: 85, emoji: "🍮", desc: "Moist brown butter sponge layered with house-made salted caramel and topped with a flaky sea salt praline.", ingredients: ["brown butter", "caramel", "sea salt", "flour", "eggs", "cream"], allergens: "Contains gluten, dairy, eggs, nuts.", sizes: [{name: "Regular", price: 85}, {name: "Double", price: 160}], popularity: 97, stock: "In Stock" },
+      { id: 6, name: "Strawberry Shortcake Slice", cat: "Cake Slices", price: 80, emoji: "🍓", desc: "Light génoise soaked in strawberry syrup, layered with fresh strawberries and Chantilly cream.", ingredients: ["flour", "strawberries", "cream", "sugar", "eggs", "vanilla"], allergens: "Contains gluten, dairy, eggs.", sizes: [{name: "Regular", price: 80}], popularity: 85, stock: "Low Stock" },
+      { id: 7, name: "Rose Gold Cake Pops", cat: "Cake Pops", price: 55, emoji: "🌸", desc: "Elegant vanilla cake pops hand-dipped in rose gold chocolate and finished with gold dust. Sold in sets of 4.", ingredients: ["vanilla cake", "white chocolate", "rose colour", "gold dust", "butter"], allergens: "Contains gluten, dairy, eggs.", sizes: [{name: "Set of 4", price: 55}, {name: "Set of 8", price: 100}, {name: "Set of 12", price: 140}], popularity: 80, stock: "In Stock" },
+      { id: 8, name: "Choc Hazelnut Pops", cat: "Cake Pops", price: 60, emoji: "🍫", desc: "Hazelnut praline cake pops dipped in dark chocolate with a crushed hazelnut coating. Rich and nutty.", ingredients: ["chocolate cake", "hazelnuts", "dark chocolate", "butter", "cream"], allergens: "Contains gluten, dairy, eggs, nuts.", sizes: [{name: "Set of 4", price: 60}, {name: "Set of 8", price: 110}, {name: "Set of 12", price: 150}], popularity: 82, stock: "In Stock" },
+      { id: 9, name: "Earl Grey & Lavender", cat: "Whole Cakes", price: 395, emoji: "🫖", desc: "Fragrant Earl Grey sponge infused with French lavender, layered with honey mascarpone and candied lemon.", ingredients: ["flour", "Earl Grey tea", "lavender", "mascarpone", "honey", "lemon", "butter", "eggs"], allergens: "Contains gluten, dairy, eggs.", sizes: [{name: "Small (6\")", price: 395}, {name: "Medium (8\")", price: 495}], popularity: 78, stock: "In Stock" },
+      { id: 10, name: "Matcha Mochi Slice", cat: "Cake Slices", price: 90, emoji: "🍵", desc: "Japanese-inspired ceremonial matcha sponge with a mochi filling and white chocolate ganache. Complex and delicate.", ingredients: ["matcha powder", "flour", "mochi", "white chocolate", "cream", "butter"], allergens: "Contains gluten, dairy, eggs, soy.", sizes: [{name: "Regular", price: 90}, {name: "Double", price: 170}], popularity: 72, stock: "Low Stock" },
     ];
 
     let orders = [
@@ -2535,8 +2541,9 @@
         'Cake Slices': 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'Cake Pops': 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
       };
+      const imgSrc = p.image || imgMap[p.cat] || imgMap['Whole Cakes'];
       return `<div class="product-card">
-    <div class="product-card-img" style="background: url('${imgMap[p.cat]}') center/cover;">
+    <div class="product-card-img" style="background: url('${imgSrc}') center/cover;">
       ${p.stock === 'Low Stock' ? '<span style="position:absolute;top:10px;right:10px;background:#FEF3C7;color:#92400E;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:999px">Low Stock</span>' : ''}
       ${p.stock === 'Out of Stock' ? '<span style="position:absolute;top:10px;right:10px;background:#FEE2E2;color:#991B1B;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:999px">Out of Stock</span>' : ''}
     </div>
@@ -2570,18 +2577,20 @@
         'Cake Slices': 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'Cake Pops': 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
       };
-      document.getElementById('detail-img').innerHTML = `<img src="${imgMap[p.cat]}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;border-radius:24px;"/>`;
+      const imgSrc = p.image || imgMap[p.cat] || imgMap['Whole Cakes'];
+      document.getElementById('detail-img').innerHTML = `<img src="${imgSrc}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;border-radius:24px;"/>`;
       const catColors = { 'Whole Cakes': 'var(--caramel-light)', 'Cake Slices': 'var(--rose)', 'Cake Pops': 'var(--sage)' };
       const catText = { 'Whole Cakes': 'color:var(--caramel)', 'Cake Slices': 'color:var(--rose-dark)', 'Cake Pops': 'color:var(--sage-dark)' };
       document.getElementById('detail-badge').textContent = p.cat;
       document.getElementById('detail-badge').style.cssText = `background:${catColors[p.cat]};${catText[p.cat]};font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;padding:4px 12px;border-radius:999px`;
       document.getElementById('detail-name').textContent = p.name;
-      document.getElementById('detail-price').textContent = `from R${p.price}`;
+      document.getElementById('detail-price').textContent = `R${currentSize.price}`;
       document.getElementById('detail-desc').textContent = p.desc;
       document.getElementById('detail-qty').textContent = '1';
-      document.getElementById('detail-sizes').innerHTML = p.sizes.map(s =>
-        `<button class="size-btn ${s === currentSize ? 'selected' : ''}" onclick="selectSize('${s}',this)">${s}</button>`
-      ).join('');
+      document.getElementById('detail-sizes').innerHTML = p.sizes.map(s => {
+        const escapedSize = s.name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        return `<button class="size-btn ${s.name === currentSize.name ? 'selected' : ''}" onclick="selectSize('${escapedSize}',this)">${s.name}</button>`;
+      }).join('');
       document.getElementById('detail-ingredients').innerHTML = p.ingredients.map(i =>
         `<span class="ingredient-pill">${i}</span>`
       ).join('');
@@ -2589,10 +2598,11 @@
       showPage('detail');
     }
 
-    function selectSize(size, btn) {
-      currentSize = size;
+    function selectSize(sizeName, btn) {
+      currentSize = currentProduct.sizes.find(s => s.name === sizeName) || currentProduct.sizes[0];
       document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
+      document.getElementById('detail-price').textContent = `R${currentSize.price}`;
     }
 
     function changeQty(delta) {
@@ -2607,11 +2617,11 @@
     }
 
     // ========== CART ==========
-    function addToCart(product, size, qty) {
-      const key = product.id + '-' + size;
+    function addToCart(product, sizeObj, qty) {
+      const key = product.id + '-' + sizeObj.name;
       const existing = cart.find(i => i.key === key);
       if (existing) { existing.qty += qty; }
-      else { cart.push({ key, product, size, qty, price: product.price }); }
+      else { cart.push({ key, product, size: sizeObj.name, qty, price: sizeObj.price }); }
       updateCartCount();
       renderCartItems();
     }
@@ -2633,7 +2643,7 @@
       container.innerHTML = cart.map((item, idx) => `
     <div class="cart-item">
       <div class="cart-item-img" style="overflow:hidden;">
-        <img src="${item.product.cat === 'Whole Cakes' ? 'https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80' : item.product.cat === 'Cake Slices' ? 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80' : 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'}" style="width:100%;height:100%;object-fit:cover;" alt="cake"/>
+        <img src="${item.product.image || (item.product.cat === 'Whole Cakes' ? 'https://images.unsplash.com/photo-1557308536-ee471ef2c390?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80' : item.product.cat === 'Cake Slices' ? 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80' : 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80')}" style="width:100%;height:100%;object-fit:cover;" alt="cake"/>
       </div>
       <div class="cart-item-info">
         <div class="cart-item-name">${item.product.name}</div>
@@ -2800,7 +2810,8 @@
     function openAddProduct() {
       editingProductId = null;
       document.getElementById('modal-title').textContent = 'Add Product';
-      ['modal-name', 'modal-price', 'modal-desc', 'modal-ingredients', 'modal-sizes'].forEach(id => document.getElementById(id).value = '');
+      ['modal-name', 'modal-price', 'modal-desc', 'modal-ingredients', 'modal-sizes', 'modal-image', 'modal-image-data'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('modal-image-preview').style.display = 'none';
       document.getElementById('modal-category').value = 'Whole Cakes';
       document.getElementById('modal-stock').value = 'In Stock';
       document.getElementById('product-modal').classList.remove('hidden');
@@ -2814,8 +2825,17 @@
       document.getElementById('modal-price').value = p.price;
       document.getElementById('modal-desc').value = p.desc;
       document.getElementById('modal-ingredients').value = p.ingredients.join(', ');
-      document.getElementById('modal-sizes').value = p.sizes.join(', ');
+      document.getElementById('modal-sizes').value = p.sizes.map(s => `${s.name}:${s.price}`).join(', ');
       document.getElementById('modal-category').value = p.cat;
+      document.getElementById('modal-image').value = '';
+      document.getElementById('modal-image-data').value = p.image || '';
+      const preview = document.getElementById('modal-image-preview');
+      if (p.image) {
+        preview.style.backgroundImage = `url('${p.image}')`;
+        preview.style.display = 'block';
+      } else {
+        preview.style.display = 'none';
+      }
       document.getElementById('modal-stock').value = p.stock;
       document.getElementById('product-modal').classList.remove('hidden');
     }
@@ -2829,10 +2849,17 @@
         cat: document.getElementById('modal-category').value,
         desc: document.getElementById('modal-desc').value,
         ingredients: document.getElementById('modal-ingredients').value.split(',').map(s => s.trim()).filter(Boolean),
-        sizes: document.getElementById('modal-sizes').value.split(',').map(s => s.trim()).filter(Boolean),
+        sizes: document.getElementById('modal-sizes').value.split(',').map(s => s.trim()).filter(Boolean).map(s => {
+          if (s.includes(':')) {
+             const parts = s.split(':');
+             return { name: parts[0].trim(), price: parseInt(parts[1].trim()) };
+          }
+          return { name: s, price: price };
+        }),
         allergens: 'Please check with us for allergen details.',
         popularity: 75,
         stock: document.getElementById('modal-stock').value,
+        image: document.getElementById('modal-image-data').value,
       };
       if (editingProductId) {
         const idx = products.findIndex(p => p.id === editingProductId);
@@ -2876,6 +2903,19 @@
     }
 
     function closeOrderModal() { document.getElementById('order-modal').classList.add('hidden'); }
+
+    function handleImageUpload(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        document.getElementById('modal-image-data').value = event.target.result;
+        const preview = document.getElementById('modal-image-preview');
+        preview.style.backgroundImage = `url('${event.target.result}')`;
+        preview.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    }
 
     // ========== TOAST ==========
     function showToast(msg) {
