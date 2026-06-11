@@ -1516,9 +1516,16 @@
       font-weight: 600
     }
 
+    .admin-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
     .admin-table {
       width: 100%;
-      border-collapse: collapse
+      border-collapse: collapse;
+      min-width: 700px;
     }
 
     .admin-table th {
@@ -2361,19 +2368,21 @@
             </div>
             <div class="admin-card">
               <div class="admin-card-header"><span class="admin-card-title">Recent Orders</span></div>
-              <table class="admin-table">
-                <thead>
-                  <tr>
-                    <th>Order #</th>
-                    <th>Customer</th>
-                    <th>Items</th>
-                    <th>Total</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody id="admin-recent-orders"></tbody>
-              </table>
+              <div class="admin-table-wrapper">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Order #</th>
+                      <th>Customer</th>
+                      <th>Items</th>
+                      <th>Total</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-recent-orders"></tbody>
+                </table>
+              </div>
             </div>
           </div>
 
@@ -2384,18 +2393,20 @@
                 <span class="admin-card-title">All Products</span>
                 <button class="btn-new" onclick="openAddProduct()">+ Add Product</button>
               </div>
-              <table class="admin-table">
-                <thead>
-                  <tr>
-                    <th>Product</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Stock</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody id="admin-products-table"></tbody>
-              </table>
+              <div class="admin-table-wrapper">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Category</th>
+                      <th>Price</th>
+                      <th>Stock</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-products-table"></tbody>
+                </table>
+              </div>
             </div>
           </div>
 
@@ -2403,21 +2414,23 @@
           <div id="admin-orders" style="display:none">
             <div class="admin-card">
               <div class="admin-card-header"><span class="admin-card-title">All Orders</span></div>
-              <table class="admin-table">
-                <thead>
-                  <tr>
-                    <th>Order #</th>
-                    <th>Customer</th>
-                    <th>Date</th>
-                    <th>Items</th>
-                    <th>Total</th>
-                    <th>Type</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody id="admin-all-orders"></tbody>
-              </table>
+              <div class="admin-table-wrapper">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Order #</th>
+                      <th>Customer</th>
+                      <th>Date</th>
+                      <th>Items</th>
+                      <th>Total</th>
+                      <th>Type</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-all-orders"></tbody>
+                </table>
+              </div>
             </div>
           </div>
 
